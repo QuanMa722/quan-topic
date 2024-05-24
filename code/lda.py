@@ -16,7 +16,7 @@ def get_topic():
         with open(file="../data/stopwords.txt", mode="r", encoding="utf-8") as stop_file:
             stopwords: list = stop_file.read().splitlines()
 
-        with open(file="../data/process12.txt", mode="r", encoding="utf-8") as f:
+        with open(file="../data/process2.txt", mode="r", encoding="utf-8") as f:
             comment_dict_list: list = f.readlines()
 
         comment_list = [eval(item)["评论内容"] for item in comment_dict_list]
@@ -75,10 +75,10 @@ def get_topic():
 def get_file(topic_words):
     try:
 
-        with open(file="../data/process12.txt", mode="r", encoding="utf-8") as f1:
+        with open(file="../data/process2.txt", mode="r", encoding="utf-8") as f1:
             comment_dict_list: list = f1.readlines()
 
-        with open(f"../data/lda12.txt", "a", encoding="utf-8") as f2:
+        with open(f"../data/lda2.txt", "a", encoding="utf-8") as f2:
             for comment in comment_dict_list:
                 corpus = jieba.lcut(eval(comment)["评论内容"])
                 for word in corpus:
