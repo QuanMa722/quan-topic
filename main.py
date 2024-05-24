@@ -9,11 +9,13 @@ spec.loader.exec_module(module)
 
 
 """
-  After processing the data for LDA processing data, 
+----------------------------------------------------
+    After processing the data for LDA processing data, 
 during which you can add the relevant deactivated 
 words, and then word embedding, after word embedding, 
 you can run the file bert.ipynb, remember to change 
 the file name.
+----------------------------------------------------
 """
 
 
